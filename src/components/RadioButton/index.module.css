@@ -1,0 +1,59 @@
+.radio {
+  display: inline-block;
+}
+
+.radio:focus-within .radioLabel {
+  opacity: 1;
+}
+
+.radioLabel {
+  line-height: 1;
+  transition: 180ms all ease-in-out;
+  opacity: 0.8;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0.5em;
+}
+
+.radioInput {
+  display: inline-block;
+  font-size: 1.75rem;
+}
+
+.radioInput input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radioInput input:focus + .radioControl {
+  box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em #418628;
+}
+
+.radioBefore .radioControl {
+  display: grid;
+  place-items: center;
+}
+
+.radioBefore input + .radioControl::before {
+  content: "";
+  width: 0.375em;
+  height: 0.375em;
+  box-shadow: inset 0.375em 0.375em #418628;
+  border-radius: 50%;
+  transition: 180ms transform ease-in-out;
+  transform: scale(0);
+}
+
+.radioBefore input:checked + .radioControl::before {
+  transform: scale(1);
+}
+
+.radioControl {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  border: 0.1em solid #418628;
+  transform: translateY(-0.05em);
+}

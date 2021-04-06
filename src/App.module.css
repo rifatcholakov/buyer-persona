@@ -1,0 +1,19 @@
+.app {
+    display: flex;
+    justify-content: center;
+    border-radius: 3.125em;
+}
+
+.aside {
+    background: #FAFAFA;
+    max-width: 24em;
+    padding: 1em 2.875em;
+}
+.main {
+    background: #fff;
+    max-width: 46em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
