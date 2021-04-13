@@ -1,0 +1,28 @@
+.icon svg path {
+    fill:#848484;
+    color: #848484;
+}
+
+.iconWrapper {
+    background: #fff;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.iconWrapper:not(:last-child) {
+    margin-right: 0.875em;
+}
+
+.iconWrapper.selected {
+    background: #418628;
+}
+
+.iconWrapper.selected svg path {
+    fill: #fff;
+    color: #fff;
+}

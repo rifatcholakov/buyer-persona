@@ -1,0 +1,17 @@
+.button {
+    background: #418628;
+    border-radius: 0.3125em;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 600;
+    padding: 0.7em 0.9em;
+    cursor: pointer;
+    height: 3.125em;
+    width: 15.5em;
+    text-align: center;
+    letter-spacing: 0.75px;
+}
+
+.icon {
+    margin-right: 0.5em;
+}

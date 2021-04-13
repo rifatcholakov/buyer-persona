@@ -1,0 +1,29 @@
+.section {
+    width: 100%;
+    height: 16.0625em;
+    border-radius: 0.625em;
+    border: 1px dashed #C9C9C9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title {
+    border: none;
+    font-size: 1.125em;
+    outline: none;
+    margin-bottom: 0.875em;
+    color: #1A1A1A;
+    font-weight: 600;
+}
+
+.title::placeholder {
+    color: #C9C9C9;
+}
+
+.buttonText {
+    color: #418628;
+    font-size: 1.125em;
+}

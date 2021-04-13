@@ -1,15 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import styles from './index.module.css';
+import styles from './index.module.css'
 
-function Input({ label, type, id, name, placeholder }) {
+function Input({type, id, name, placeholder, value, onInputChange, checked }) {
+
+    const handleChange = (event) => {
+        const inputValue = event.target.value
+        onInputChange(inputValue)
+    }
+
+    if(type === 'radio') {
+        return (
+            <input
+                className={styles.input}
+                type={type}
+                placeholder={placeholder}
+                name={name}
+                id={id}
+                value={value}
+                onChange={handleChange}
+                checked={checked}
+            />
+        );
+    }
 
     return (
-        <div className={styles.formControlGroup}>
-            <label className={styles.inputLabel} for={id}>{label}</label>
-            <input className={styles.input} type={type} placeholder={placeholder} name={name} id={id} />
-        </div>
+        <input
+            className={styles.input}
+            type={type}
+            placeholder={placeholder}
+            name={name}
+            id={id}
+            value={value}
+            onChange={handleChange}
+        />
     );
 }
 
-export default Input;
+export default Input

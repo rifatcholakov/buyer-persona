@@ -1,18 +1,21 @@
 import React from 'react'
+import Input from '../Input';
 
 import styles from './index.module.css';
 
-function RadioButton({ label, id, name, value }) {
+function RadioButton({ label, name, value, checked, onRadioChange }) {
     return (
         <>
             <label className={`${styles.radio} ${styles.radioBefore}`}>
                 <span className={styles.radioInput}>
-                    <input
+                    <Input
                         type="radio"
                         name={name}
                         value={value}
-                        id={id}
+                        checked={value.toLowerCase() === checked.toLowerCase()}
+                        onInputChange={onRadioChange}
                     />
+
                     <span className={styles.radioControl}></span>
                 </span>
                 <span className={styles.radioLabel}>{label}</span>

@@ -1,20 +1,9 @@
-.formControlGroup {
-    display: block;
-    margin-bottom: 1.75em;
-}
-
-.inputLabel {
-    font-weight: 600;
-    color: #1A1A1A;
-    margin-bottom: 0.875em;
-    display: block;
-}
-
 .input {
     border: 1px solid #C9C9C9;
     border-radius: 0.625em;
     font-weight: 400;
-    padding: 1em 1.25em;
+    padding: 0.88em 1.11em;
+    font-size: 1.125em;
     width: 100%;
 }
 
