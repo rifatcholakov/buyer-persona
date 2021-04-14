@@ -1,11 +1,33 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Icon from '../Icon'
 
 import styles from './index.module.css'
 
 function Avatar({ children }) {
-    return <div className={styles.avatarWrapper}>
-        { children }
-    </div>;
+    return (
+        <div className={styles.avatarWrapper}>
+            {children}
+            <div className={styles.iconWrapper}>
+                <Link to="/avatar">
+                    <Icon>
+                        <svg
+                            width="19"
+                            height="19"
+                            viewBox="0 0 19 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M18.2617 2.85156L16.3633 0.953125C15.4492 0.0390625 13.9375 0.0390625 13.0234 0.953125L1.84375 12.0625L1 17.3008C0.894531 17.8633 1.38672 18.3555 1.94922 18.25L7.1875 17.4062L18.2969 6.22656C19.2109 5.3125 19.2109 3.80078 18.2617 2.85156ZM8.03125 11.2188C8.17188 11.3594 8.38281 11.4297 8.59375 11.4297C8.76953 11.4297 8.98047 11.3594 9.12109 11.2188L13.3047 7.03516L14.3242 8.05469L8.38281 14.0312V12.5547H6.69531V10.8672H5.21875L11.1953 4.92578L12.2148 5.94531L8.03125 10.1289C7.71484 10.4453 7.71484 10.9023 8.03125 11.2188ZM3.88281 16.3867L2.86328 15.3672L3.32031 12.8008L3.95312 12.1328H5.42969V13.8203H7.11719V15.2969L6.44922 15.9297L3.88281 16.3867ZM17.207 5.13672L15.4844 6.85938L12.3906 3.76562L14.1133 2.04297C14.4297 1.72656 14.957 1.72656 15.2734 2.04297L17.1719 3.94141C17.5234 4.29297 17.5234 4.82031 17.207 5.13672Z"
+                                fill="#418628"
+                            />
+                        </svg>
+                    </Icon>
+                </Link>
+            </div>
+        </div>
+    );
 }
 
 export default Avatar

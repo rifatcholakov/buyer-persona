@@ -1,6 +1,18 @@
 .avatarWrapper {
-    border-radius: 50%;
     display: flex;
     justify-content: center;
-    margin-bottom: 3.75em;
+    margin: 0 auto 3.75em auto;
+}
+
+.avatarWrapper img {
+    width: 12.25em;
+    height: 12.25em;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
 }

@@ -18,11 +18,11 @@
     margin-right: 0.875em;
 }
 
-.iconWrapper.selected {
+.iconWrapper.active {
     background: #418628;
 }
 
-.iconWrapper.selected svg path {
+.iconWrapper.active svg path {
     fill: #fff;
     color: #fff;
 }

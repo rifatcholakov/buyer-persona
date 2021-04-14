@@ -1,3 +1,7 @@
+.section {
+    position: relative;
+}
+
 .sectionInput {
     border: 1px solid #C9C9C9;
     background: #fff;
@@ -7,6 +11,7 @@
     border-radius: 0.625em;
     padding: 1.125em 1.25em;
     font-family: inherit;
+    font-size: 1rem;
 }
 
 .sectionInput:focus {
@@ -18,4 +23,38 @@
     color: #C9C9C9;
     font-weight: 500;
     font-size: 1.125em;
+}
+
+.action {
+    position: absolute;
+    right: 0;
+    top: -2.25em;
+    cursor: pointer;
+    display: none;
+}
+
+.action:hover svg path {
+    fill: #B60B00;
+}
+
+.section:hover .action,
+.section:focus-within .action {
+    display: block;
+}
+
+.warning {
+    position: absolute;
+    right: 0;
+    top: -2.25em;
+    display: none;
+    transition: right 0.5s;
+}
+
+.active {
+    display: block;
+}
+
+.section:hover .active,
+.section:focus-within .active {
+    right: 1.5625em;
 }

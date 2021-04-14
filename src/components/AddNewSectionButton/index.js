@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Icon from '../Icon'
-import Input from '../Input';
 
 import styles from './index.module.css'
 

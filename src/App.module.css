@@ -26,23 +26,12 @@
     border-bottom-left-radius: 3.125em;
     border-top-left-radius: 3.125em;
 }
-.main {
+
+.mainContent {
     max-width: 46em;
     width: 100%;
     padding: 3.875em 4.125em;
     background: #fff;
     border-top-right-radius: 3.125em;
     border-bottom-right-radius: 3.125em;
-}
-
-.sections {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.sectionWrapper {
-    flex-basis: calc(50% - 0.9375em);
-    margin-bottom: 1.875em;
 }

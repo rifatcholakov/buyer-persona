@@ -4,13 +4,13 @@ import RadioButton from '../RadioButton';
 import Label from '../Label';
 import FormGroup from '../FormGroup';
 import Select from '../Select';
+import Avatar from '../Avatar'
 
 import styles from './index.module.css';
 import SocialIcon from '../SocialIcon';
 import InlineBlockItems from '../InlineBlockItems';
 
-function Form() {
-
+function Form({ avatarIndex }) {
     const [gender, setGender] = useState('')
     const [name, setName] = useState('')
     const [age, setAge] = useState(0)
@@ -19,16 +19,24 @@ function Form() {
     const [jobTitle, setJobTitle] = useState('')
     const [organizationSize, setOrganizationSize] = useState('')
     const [maritalStatus, setMaritalStatus] = useState('')
-    const [socialMedia, setSocialMedia] = useState([
-        { name: 'facebook', active: true },
-        { name: 'twitter', active: false },
-        { name: 'linkedin', active: false },
-        { name: 'instagram', active: false },
-        { name: 'snapchat', active: false }
-    ]);
+    const [socialMedia, setSocialMedia] = useState({
+        facebook: false,
+        twitter: false,
+        linkedin: false,
+        instagram: false,
+        snapchat: false
+    });
 
     return (
         <form>
+            <FormGroup>
+                <Avatar>
+                    <img
+                        src={`/images/avatar-${avatarIndex}.svg`}
+                        alt="avatar"
+                    />
+                </Avatar>
+            </FormGroup>
             <FormGroup>
                 <Label title="Gender:">
                     <RadioButton
@@ -160,7 +168,11 @@ function Form() {
             <FormGroup>
                 <Label title="Social media:">
                     <InlineBlockItems>
-                        <SocialIcon name="facebook">
+                        <SocialIcon
+                            name="facebook"
+                            setSocialMedia={setSocialMedia}
+                            active={socialMedia.facebook}
+                        >
                             <svg
                                 width="10"
                                 height="19"
@@ -174,7 +186,11 @@ function Form() {
                                 />
                             </svg>
                         </SocialIcon>
-                        <SocialIcon name="twitter">
+                        <SocialIcon
+                            name="twitter"
+                            setSocialMedia={setSocialMedia}
+                            active={socialMedia.twitter}
+                        >
                             <svg
                                 width="18"
                                 height="16"
@@ -188,7 +204,11 @@ function Form() {
                                 />
                             </svg>
                         </SocialIcon>
-                        <SocialIcon name="linkedin">
+                        <SocialIcon
+                            name="linkedin"
+                            setSocialMedia={setSocialMedia}
+                            active={socialMedia.linkedin}
+                        >
                             <svg
                                 width="16"
                                 height="16"
@@ -202,7 +222,11 @@ function Form() {
                                 />
                             </svg>
                         </SocialIcon>
-                        <SocialIcon name="instagram">
+                        <SocialIcon
+                            name="instagram"
+                            setSocialMedia={setSocialMedia}
+                            active={socialMedia.instagram}
+                        >
                             <svg
                                 width="16"
                                 height="17"
@@ -216,7 +240,11 @@ function Form() {
                                 />
                             </svg>
                         </SocialIcon>
-                        <SocialIcon name="snapchat">
+                        <SocialIcon
+                            name="snapchat"
+                            setSocialMedia={setSocialMedia}
+                            active={socialMedia.snapchat}
+                        >
                             <svg
                                 width="19"
                                 height="18"

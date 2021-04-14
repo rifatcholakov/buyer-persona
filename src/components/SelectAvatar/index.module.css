@@ -1,0 +1,13 @@
+.title {
+    font-size: 1.125em;
+    font-weight: 600;
+    color: 1A1A1A;
+    margin-bottom: 3.25em;
+    margin-top: 0;
+}
+
+.avatars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

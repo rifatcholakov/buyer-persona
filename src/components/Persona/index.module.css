@@ -1,0 +1,23 @@
+.avatarWrapper {
+    display: flex;
+    flex-basis: 25%;
+    margin-bottom: 2.75em;
+}
+
+.avatarWrapper img {
+    width: 6.5em;
+    height: 6.5em;
+    background: #FAFAFA;
+    border-radius: 50%;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.iconWrapper:hover * {
+    fill: #418628;
+    color: #418628;
+}
